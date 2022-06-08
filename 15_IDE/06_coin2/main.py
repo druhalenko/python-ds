@@ -1,12 +1,14 @@
-def find_monetka(c1, c2, r):
- if c1 <= r and c2 <= r:
-  print('Монетка где-то рядом')
- else:
-  print('Монетки рядом нет')
+import math
+
 
 print('Введите координаты монетки: ')
-x = float(input("Введите x: "))
-y = float(input("Введите y: "))
-r = int(input("Введите радиус : "))
+x = float(input('Введите x: '))
+y = float(input('Введите y: '))
+r = float(input('Введите радиус: '))
 
-find_monetka(x, y, r)
+
+r_xy = math.sqrt(x ** 2 + y ** 2)
+if r_xy <= r:
+    print('Монетка где-то рядом')
+else:
+    print('Монетки в области нет')
